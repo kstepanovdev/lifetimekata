@@ -141,7 +141,7 @@ mod test {
                 vec![
                     (&MatcherToken::RawText("abc"), "abc"),
                     (&MatcherToken::OneOfText(vec!["d", "e", "f"]), "d"),
-                    (&MatcherToken::WildCard, "e") // or '💪'
+                    (&MatcherToken::WildCard, "e")
                 ]
             );
             assert_eq!(matcher.most_tokens_matched, 3);

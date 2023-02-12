@@ -30,9 +30,8 @@ use require_lifetimes::require_lifetimes;
 /// // Hopefully, they're now equal
 /// assert_eq!(message , vec!["Hello", "Your", "Name", "Is", "Unknown"]);
 /// ````
+
 #[require_lifetimes(!)]
-pub fn vector_set(vector: &mut Vec<&str>, loc: usize, new: &str) {
-    // TODO: You will need to write this code yourself.
-    //       Don't worry, it's only one line long.
-    todo!()
+pub fn vector_set<'a, 'b>(vector: &'b mut Vec<&'a str>, loc: usize, new: &'a str) {
+    vector[loc] = new;
 }
